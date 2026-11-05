@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CareBridge</title>
+<meta name="description" content="CareBridge simplifies hospital discharge summaries for patients and families, and prepares follow-up reminders.">
+<meta name="theme-color" content="#F5F1E6">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CareBridge">
+<meta property="og:title" content="CareBridge">
+<meta property="og:description" content="Understand your hospital discharge summary in simple words and get friendly follow-up reminders. English, हिन्दी, বাংলা, తెలుగు, தமிழ்.">
+<meta property="og:url" content="https://carebridge-ai-refresh.netlify.app/">
+<meta property="og:image" content="https://carebridge-ai-refresh.netlify.app/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CareBridge logo, a green heart around a house resting on a peach hand, beside the words From hospital to home">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://carebridge-ai-refresh.netlify.app/assets/og-image.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CareBridge">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 120%22%3E%3Cdefs%3E%3ClinearGradient id=%22cbh%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23A7C9A6%22/%3E%3Cstop offset=%22.45%22 stop-color=%22%236E9C72%22/%3E%3Cstop offset=%221%22 stop-color=%22%23355E45%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22cbr%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop class=%22r1%22 offset=%220%22 stop-color=%22%2346714F%22/%3E%3Cstop class=%22r2%22 offset=%221%22 stop-color=%22%232A4433%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22cbw%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23FFFDF8%22/%3E%3Cstop offset=%221%22 stop-color=%22%23E7EFDF%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22cbp%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%22.6%22%3E%3Cstop offset=%220%22 stop-color=%22%23F6D7BC%22/%3E%3Cstop offset=%22.55%22 stop-color=%22%23E2AC88%22/%3E%3Cstop offset=%221%22 stop-color=%22%23C07F5F%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22cbs%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%235C8A64%22/%3E%3Cstop offset=%221%22 stop-color=%22%232E4A37%22/%3E%3C/linearGradient%3E%3Cfilter id=%22cbd%22 x=%22-20%25%22 y=%22-20%25%22 width=%22140%25%22 height=%22140%25%22%3E%3CfeDropShadow dx=%220%22 dy=%221.6%22 stdDeviation=%221.4%22 flood-color=%22%231F3527%22 flood-opacity=%22.28%22/%3E%3C/filter%3E%3C/defs%3E%3Cg filter=%22url%28%23cbd%29%22%3E%3Cpath d=%22M52 99C30 86 11 69 11 45 11 28 23 16 38 16c9.6 0 17.2 5 22 12.6C64.8 21 72.4 16 82 16c15 0 27 12 27 29 0 8.6-2.6 16-7 22.6%22 fill=%22none%22 stroke=%22url%28%23cbh%29%22 stroke-width=%2210%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/g%3E%3Cpath d=%22M20 34c2.4-7.6 8.8-12.6 16.6-12.8M70 23.4c3.4-1.8 7.2-2.6 11-2.4%22 fill=%22none%22 stroke=%22%23fff%22 stroke-opacity=%22.55%22 stroke-width=%222.6%22 stroke-linecap=%22round%22/%3E%3Cg filter=%22url%28%23cbd%29%22 transform=%22translate%280 4%29%22%3E%3Cpath d=%22M41 58 60 42.5 79 58v26H41z%22 fill=%22url%28%23cbw%29%22/%3E%3Crect x=%2272%22 y=%2238%22 width=%226.5%22 height=%2214%22 rx=%221.4%22 fill=%22url%28%23cbr%29%22/%3E%3Cpath d=%22M35 61 60 40.5 85 61%22 fill=%22none%22 stroke=%22url%28%23cbr%29%22 stroke-width=%227%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Crect x=%2252.5%22 y=%2258%22 width=%2215%22 height=%2214%22 rx=%222%22 fill=%22url%28%23cbs%29%22/%3E%3Cpath d=%22M60 59.5v11M54 65h12%22 stroke=%22%23FFF3E4%22 stroke-width=%221.7%22/%3E%3C/g%3E%3Cg filter=%22url%28%23cbd%29%22%3E%3Cpath d=%22M37 91.6C48 88.8 62 88 75.6 88c5.6 0 9.6-2.2 12.6-6.2 1.8-2.6 6-2.2 6.2 1.4.2 3.2-1.4 6-3.6 8.4L104 86l3 12.4c-11 5.4-23 8.2-36 8-12.6-.2-23.4-4.2-33-9.2-3-1.6-3-4.8-1-5.6z%22 fill=%22url%28%23cbp%29%22/%3E%3Cpath d=%22M102.6 85.2 113 80.6l4 18.4-10.4 3.4z%22 fill=%22url%28%23cbs%29%22/%3E%3C/g%3E%3Cpath d=%22M41.6 96.4c8.4 2.6 16.8 3.8 25.4 3.6M45 93.4c7.4 1.6 14.6 2.4 22 2.2M90.6 91.6c-4 2.2-8.6 3.4-13.4 3.6%22 fill=%22none%22 stroke=%22%23A86848%22 stroke-opacity=%22.5%22 stroke-width=%221.1%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M50 90.4c9-1.4 18-1.8 26-1.6%22 fill=%22none%22 stroke=%22%23fff%22 stroke-opacity=%22.5%22 stroke-width=%221.5%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M104.8 86.4l2.6 11%22 stroke=%22%23fff%22 stroke-opacity=%22.25%22 stroke-width=%221.4%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+/* ===== Design tokens: light ===== */
+:root{
+ /* brand */
+ --primary-900:#2E4A37;--primary-600:#46714F;--primary-200:#CADBC0;--primary-100:#E4EDDB;--primary-50:#EFF4E8;--accent-gold:#E3B58C;
+ --bg:#F5F1E6;--surface:#FFFDF8;--surface-2:#F4EFE3;--text:#26352B;--muted:#5C6658;--muted-2:#465245;--border:#E1D9C6;
+ --link:#46714F;--btn:#46714F;--btn-h:#3A5F42;--plus:#A9654C;--glass:rgba(255,253,248,.78);--ill:none;
+ /* semantic: border/icon colour, soft background, readable text */
+ --ok:#2E9E5B;--ok-bg:#E8F6EE;--ok-tx:#1D6B3E;
+ --cau:#E8A317;--cau-bg:#FFF6E0;--cau-tx:#7A4F00;
+ --info:#3A7BD5;--info-bg:#EAF2FD;--info-tx:#1F4F94;
+ --em:#D93025;--em-bg:#FDECEA;--em-tx:#A3241B;--em-solid:#D93025;
+ /* surfaces & effects */
+ --hero:linear-gradient(180deg,#F8F0E2 0%,#F1F1E3 45%,#E3EEDC 100%);
+ --blob1:rgba(207,224,193,.8);--blob2:rgba(240,226,200,.75);--blob3:rgba(214,232,212,.7);--blob4:rgba(238,214,192,.5);
+ --sk:#E8E2D2;--shine:rgba(255,255,255,.75);
+ --sh:0 1px 2px rgba(46,74,55,.05),0 6px 18px -6px rgba(46,74,55,.10);
+ --sh2:0 2px 6px rgba(46,74,55,.07),0 18px 38px -14px rgba(46,74,55,.22);
+ --bsh:0 1px 2px rgba(46,74,55,.18),0 8px 18px -8px rgba(70,113,79,.6);
+ --bsh2:0 2px 4px rgba(46,74,55,.2),0 12px 24px -8px rgba(70,113,79,.65);
+ --ring:0 0 0 4px rgba(70,113,79,.22);
+ --fb:"DM Sans","Noto Sans Devanagari","Noto Sans Bengali","Noto Sans Telugu","Noto Sans Tamil",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --fh:"Fraunces",Georgia,"Noto Sans Devanagari","Noto Sans Bengali","Noto Sans Telugu","Noto Sans Tamil",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ --lh:1.65;--lhh:1.3;
+ --ease:cubic-bezier(.2,.7,.2,1);--t:.2s;
+ /* icons (masks use currentColor via background-color; chips have baked colours) */
+ --i-up:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 15V4M7.5 8.5 12 4l4.5 4.5M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15'/%3E%3C/svg%3E");
+ --i-pen:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4zM13.5 6.5l4 4'/%3E%3C/svg%3E");
+ --i-send:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 3 10 14M21 3l-6.5 18-4.5-7-7-4.5z'/%3E%3C/svg%3E");
+ --i-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E");
+ --i-chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+ --i-shield:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z'/%3E%3Cpath d='m8.8 12 2.3 2.3 4.2-4.6'/%3E%3C/svg%3E");
+ --i-warn:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0zM12 9.5v4M12 17h.01'/%3E%3C/svg%3E");
+ --c-ok:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E");
+ --c-cau:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2312302E' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.3 4.7 3.4 17a2 2 0 0 0 1.7 3h13.8a2 2 0 0 0 1.7-3L13.7 4.7a2 2 0 0 0-3.4 0zM12 10v3.5M12 16.8h.01'/%3E%3C/svg%3E");
+ --c-info:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M12 11v6.5M12 6.8h.01'/%3E%3C/svg%3E");
+ --c-em:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M12 5.5v8.5M12 18.3h.01'/%3E%3C/svg%3E");
+ --c-brand:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23F4B860' d='M12 19.5c-5.5-3.6-7.4-6.9-6.3-9.5.9-2.2 3.9-2.7 6.3-.4 2.4-2.3 5.4-1.8 6.3.4 1.1 2.6-.8 5.9-6.3 9.5z'/%3E%3C/svg%3E");
+ --c-phone:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 3.5h3.5l2 5-2.5 1.5a11 11 0 0 0 6 6l1.5-2.5 5 2V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z'/%3E%3C/svg%3E");
+ --bridge:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 160' fill='none' stroke='black' stroke-linecap='round'%3E%3Cpath d='M20 128Q160 20 300 128' stroke-width='5'/%3E%3Cpath d='M4 128h312' stroke-width='4'/%3E%3Cpath d='M66 97v31M113 78v50M160 74v54M207 78v50M254 97v31' stroke-width='3'/%3E%3Cpath d='M30 146c14-7 28-7 42 0s28 7 42 0 28-7 42 0 28 7 42 0 28-7 42 0 28 7 42 0' stroke-width='3' opacity='.6'/%3E%3C/svg%3E");
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+/* ===== Design tokens: dark (system preference, unless forced light). Keep in sync with the forced copy below. ===== */
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --primary-900:#DDE9D3;--primary-600:#A8CB9C;--primary-200:#3B4F3D;--primary-100:#243226;--primary-50:#1B251D;--accent-gold:#E3B58C;
+ --bg:#131813;--surface:#1A211B;--surface-2:#161D17;--text:#EBEEE4;--muted:#B0BAA9;--muted-2:#C4CDBD;--border:#2F3A2F;
+ --link:#A8CB9C;--btn:#46714F;--btn-h:#3D6545;--plus:#E3B58C;--glass:rgba(26,33,27,.8);--ill:brightness(.82) saturate(.9);
+ --ok:#4CC47F;--ok-bg:#0F2E1D;--ok-tx:#A8E6C0;
+ --cau:#F0B640;--cau-bg:#2F250B;--cau-tx:#F6D58F;
+ --info:#6FA4EE;--info-bg:#12253E;--info-tx:#BCD4F8;
+ --em:#F26B60;--em-bg:#3A1714;--em-tx:#FFC6C0;--em-solid:#C5281E;
+ --hero:linear-gradient(165deg,#25332A 0%,#1A211B 62%);
+ --blob1:rgba(143,175,145,.10);--blob2:rgba(227,181,140,.06);--blob3:rgba(168,203,156,.06);--blob4:rgba(237,233,220,.03);
+ --sk:#283229;--shine:rgba(255,255,255,.07);
+ --sh:0 1px 2px rgba(0,0,0,.3),0 10px 24px -10px rgba(0,0,0,.5);
+ --sh2:0 2px 6px rgba(0,0,0,.35),0 20px 40px -14px rgba(0,0,0,.65);
+ --bsh:0 1px 2px rgba(0,0,0,.4),0 8px 18px -8px rgba(70,113,79,.7);
+ --bsh2:0 2px 4px rgba(0,0,0,.4),0 12px 24px -8px rgba(70,113,79,.8);
+ --ring:0 0 0 4px rgba(168,203,156,.28);
+ color-scheme:dark}}
+/* ===== Design tokens: dark (forced) ===== */
+:root[data-theme="dark"]{
+ --primary-900:#DDE9D3;--primary-600:#A8CB9C;--primary-200:#3B4F3D;--primary-100:#243226;--primary-50:#1B251D;--accent-gold:#E3B58C;
+ --bg:#131813;--surface:#1A211B;--surface-2:#161D17;--text:#EBEEE4;--muted:#B0BAA9;--muted-2:#C4CDBD;--border:#2F3A2F;
+ --link:#A8CB9C;--btn:#46714F;--btn-h:#3D6545;--plus:#E3B58C;--glass:rgba(26,33,27,.8);--ill:brightness(.82) saturate(.9);
+ --ok:#4CC47F;--ok-bg:#0F2E1D;--ok-tx:#A8E6C0;
+ --cau:#F0B640;--cau-bg:#2F250B;--cau-tx:#F6D58F;
+ --info:#6FA4EE;--info-bg:#12253E;--info-tx:#BCD4F8;
+ --em:#F26B60;--em-bg:#3A1714;--em-tx:#FFC6C0;--em-solid:#C5281E;
+ --hero:linear-gradient(165deg,#25332A 0%,#1A211B 62%);
+ --blob1:rgba(143,175,145,.10);--blob2:rgba(227,181,140,.06);--blob3:rgba(168,203,156,.06);--blob4:rgba(237,233,220,.03);
+ --sk:#283229;--shine:rgba(255,255,255,.07);
+ --sh:0 1px 2px rgba(0,0,0,.3),0 10px 24px -10px rgba(0,0,0,.5);
+ --sh2:0 2px 6px rgba(0,0,0,.35),0 20px 40px -14px rgba(0,0,0,.65);
+ --bsh:0 1px 2px rgba(0,0,0,.4),0 8px 18px -8px rgba(70,113,79,.7);
+ --bsh2:0 2px 4px rgba(0,0,0,.4),0 12px 24px -8px rgba(70,113,79,.8);
+ --ring:0 0 0 4px rgba(168,203,156,.28);
+ color-scheme:dark}
+/* Indic scripts need more room so matras and conjuncts do not clip (any non-English language selected) */
+body:has(#lang option[value]:checked){--lh:1.8;--lhh:1.5}
+
+/* ===== Base (mobile first) ===== */
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/var(--lh) var(--fb);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-tap-highlight-color:transparent;min-height:100vh;min-height:100dvh}
+@media (min-width:640px){body{font-size:18px}}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+ radial-gradient(640px 460px at 0% 0%,var(--blob1),transparent 70%),
+ radial-gradient(560px 460px at 100% 12%,var(--blob2),transparent 70%),
+ radial-gradient(620px 520px at 12% 100%,var(--blob3),transparent 70%),
+ radial-gradient(520px 420px at 96% 92%,var(--blob4),transparent 70%)}
+::selection{background:var(--primary-200);color:var(--text)}
+a{color:var(--link)}
+.w{max-width:1180px;margin:0 auto;padding:12px max(14px,env(safe-area-inset-right,0px)) 28px max(14px,env(safe-area-inset-left,0px))}
+@media (min-width:640px){.w{padding:20px max(24px,env(safe-area-inset-right,0px)) 36px max(24px,env(safe-area-inset-left,0px))}}
+
+/* ===== Header: logo, wordmark, language pills ===== */
+header{display:flex;flex-direction:column;align-items:stretch;gap:12px;background:var(--surface);color:var(--primary-900);border:1px solid var(--border);border-radius:20px;padding:12px 14px;box-shadow:var(--sh);animation:fadeD .45s var(--ease) backwards}
+@media (min-width:780px){header{flex-direction:row;align-items:center;justify-content:space-between;padding:12px 14px 12px 16px}}
+.logo{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;color:var(--primary-900)}
+.logo .mark{grid-row:span 2;display:block;width:46px;height:46px;border-radius:12px;box-shadow:0 6px 14px -6px rgba(46,74,55,.45)}
+.logo .mark svg{display:block;width:100%;height:100%}
+.logo .wm{font:600 23px/1.15 var(--fh);letter-spacing:-.01em;align-self:end}
+.logo .ai{color:var(--link)}
+.logo small{display:block;font:500 13px/1.4 var(--fb);color:var(--muted);margin-top:2px;align-self:start}
+header .row{flex-wrap:nowrap}
+header .na{color:var(--muted);font-style:normal;font-weight:600;font-size:15px}
+.lp{display:none}
+.has-lp header label[for=lang],.has-lp #lang{display:none}
+.has-lp .lp{display:flex;gap:4px;padding:4px;width:100%;overflow-x:auto;scrollbar-width:none;background:var(--surface-2);border:1px solid var(--border);border-radius:999px}
+.lp::-webkit-scrollbar{display:none}
+.lp button{flex:1 0 auto;min-height:44px;padding:6px 14px;border:0;border-radius:999px;background:transparent;color:var(--muted-2);font-weight:600;font-size:15px;line-height:1.3;cursor:pointer;white-space:nowrap;transition:background-color var(--t) ease,color var(--t) ease,box-shadow var(--t) ease}
+.lp button:hover{color:var(--primary-900);background:var(--primary-100)}
+.lp button[aria-pressed=true]{background:var(--btn);color:#fff;box-shadow:var(--bsh)}
+.lp button:focus-visible{outline:3px solid var(--link);outline-offset:1px}
+@media (min-width:780px){.has-lp .lp{width:auto}.lp button{flex:0 0 auto}}
+
+/* ===== Form controls ===== */
+select,button,textarea,input{font:inherit;color:var(--text)}
+select,textarea,input[type=text],input[type=date],input[type=time]{background-color:var(--surface);border:1.5px solid var(--border);border-radius:12px;padding:11px 14px;min-height:48px;font-size:16.5px;font-weight:400;line-height:1.4;transition:border-color var(--t) ease,box-shadow var(--t) ease,background-color var(--t) ease}
+select,textarea,input[type=text]{width:100%}
+select{width:auto;-webkit-appearance:none;appearance:none;padding-right:42px;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2346714F' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:14px}
+select:hover,textarea:hover,input[type=text]:hover,input[type=date]:hover,input[type=time]:hover{border-color:var(--primary-200)}
+select:focus,textarea:focus,input:focus{outline:none;border-color:var(--link);box-shadow:var(--ring)}
+::placeholder{color:var(--muted);opacity:1}
+.fl{display:flex;flex-direction:column;font-size:15px;font-weight:600;color:var(--muted-2);gap:6px}
+.cal button{margin:2px 4px 2px 0}
+.sch{border:1px solid var(--border);border-left:4px solid var(--cau);border-radius:16px;padding:14px 16px;margin:12px 0;background:var(--surface-2)}
+.sch:first-child{border-left-color:var(--link)}
+.sch>b{font-family:var(--fh);font-weight:700;color:var(--primary-900)}
+textarea{min-height:180px;resize:vertical;line-height:var(--lh)}
+
+/* ===== Cards & type ===== */
+.card{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 18px;margin:14px 0;box-shadow:var(--sh);transition:box-shadow var(--t) ease,translate var(--t) var(--ease)}
+@media (min-width:640px){.card{padding:26px 28px;margin:18px 0}}
+@media (hover:hover){.card:hover{translate:0 -2px;box-shadow:var(--sh2)}}
+h1{font:600 clamp(32px,6.6vw,48px)/1.12 var(--fh);letter-spacing:-.02em;margin:6px 0 14px;color:var(--primary-900)}
+h2{font:600 21px/var(--lhh) var(--fh);letter-spacing:-.005em;margin:0 0 14px;color:var(--primary-900)}
+@media (min-width:640px){h2{font-size:23px}}
+body:has(#lang option[value]:checked) h1{line-height:1.4}
+p{margin:10px 0}
+b,strong{font-weight:600}
+
+/* ===== Hero ===== */
+#welcome{overflow:hidden;isolation:isolate;background:var(--hero);border-color:var(--primary-200);padding:28px 20px 34px}
+@media (min-width:640px){#welcome{padding:44px 40px 48px}}
+#welcome::before{content:none;position:absolute;z-index:-1;right:-24px;bottom:-10px;width:min(78%,380px);aspect-ratio:2/1;background-color:var(--link);-webkit-mask:var(--bridge) center/contain no-repeat;mask:var(--bridge) center/contain no-repeat;opacity:.11}
+#welcome::after{content:"";position:absolute;z-index:-1;right:-60px;top:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent-gold) 26%,transparent),transparent 70%)}
+#welcome .hx>p{max-width:54ch;font-size:1.06em;color:var(--muted-2)}
+#welcome .hx>p.na{font-size:.95em;color:var(--muted)}
+#start{margin-top:14px;min-height:56px;padding:14px 26px;font-size:17.5px;border-radius:12px}
+#start::after{content:"";width:20px;height:20px;background-color:currentColor;-webkit-mask:var(--i-arrow) center/contain no-repeat;mask:var(--i-arrow) center/contain no-repeat;transition:transform var(--t) var(--ease)}
+#start:hover::after{transform:translateX(3px)}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;background:var(--btn);color:#fff;border:1.5px solid transparent;border-radius:12px;padding:11px 20px;cursor:pointer;font-weight:600;font-size:16.5px;line-height:1.25;text-align:center;box-shadow:var(--bsh);-webkit-user-select:none;user-select:none;touch-action:manipulation;transition:transform .15s ease,box-shadow var(--t) ease,background-color var(--t) ease,border-color var(--t) ease,color var(--t) ease}
+.btn:hover{background:var(--btn-h);box-shadow:var(--bsh2);transform:translateY(-1px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn:focus-visible{outline:3px solid var(--link);outline-offset:3px}
+.btn.s{background:var(--surface);color:var(--link);border-color:var(--link);box-shadow:none}
+.btn.s:hover{background:var(--primary-100);box-shadow:0 6px 14px -10px rgba(70,113,79,.6)}
+.btn:disabled,.btn:disabled:hover,.btn:disabled:active{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.btn.s:disabled:hover{background:var(--surface)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+
+/* ===== Segmented tabs ===== */
+.tabs{display:flex;gap:4px;margin:14px 0 16px;padding:5px;background:var(--surface-2);border:1px solid var(--border);border-radius:14px}
+@media (min-width:640px){.tabs{display:inline-flex}}
+.tabs button{flex:1 1 0;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;background:transparent;color:var(--muted-2);border-radius:10px;padding:10px 14px;min-height:48px;cursor:pointer;font-weight:600;line-height:1.25;transition:color var(--t) ease,background-color var(--t) ease,box-shadow var(--t) ease}
+.tabs button::before{content:"";flex:none;width:19px;height:19px;background-color:currentColor;-webkit-mask:var(--i-up) center/contain no-repeat;mask:var(--i-up) center/contain no-repeat}
+.tabs button[data-t=tx]::before{-webkit-mask-image:var(--i-pen);mask-image:var(--i-pen)}
+.tabs button:hover{color:var(--primary-900)}
+.tabs button:focus-visible{outline:3px solid var(--link);outline-offset:1px}
+.tabs button.on{background:var(--surface);color:var(--link);box-shadow:0 1px 2px rgba(46,74,55,.08),0 4px 12px -4px rgba(46,74,55,.18),inset 0 0 0 1px var(--border)}
+
+/* ===== Upload drop zone ===== */
+.drop{border:2px dashed color-mix(in srgb,var(--link) 45%,var(--border));border-radius:16px;padding:30px 18px;text-align:center;cursor:pointer;color:var(--muted-2);font-weight:500;background:var(--primary-50);transition:border-color var(--t) ease,background-color var(--t) ease,color var(--t) ease,box-shadow var(--t) ease,transform var(--t) var(--ease)}
+@media (min-width:640px){.drop{padding:40px 24px}}
+.drop:hover{border-color:var(--link);background:var(--primary-100);color:var(--primary-900)}
+.drop.is-drag{border-style:solid;border-color:var(--link);background:var(--primary-100);color:var(--primary-900);box-shadow:var(--ring);transform:scale(1.01)}
+.drop:active{transform:scale(.995)}
+.dic{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 12px;border-radius:18px;color:var(--link);background:var(--surface);border:1px solid var(--border);box-shadow:var(--sh);transition:transform var(--t) var(--ease)}
+.dic svg{width:30px;height:30px}
+.drop:hover .dic,.drop.is-drag .dic{transform:translateY(-3px)}
+
+/* ===== Tables ===== */
+.sc{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border);border-radius:14px;margin:6px 0;background:var(--surface)}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:480px}
+th,td{border:0;border-bottom:1px solid var(--border);padding:12px 14px;text-align:left;vertical-align:top}
+th:not(:last-child),td:not(:last-child){border-right:1px solid var(--border)}
+tr:last-child>th,tr:last-child>td{border-bottom:0}
+th{background:var(--primary-50);color:var(--primary-900);font-weight:600;white-space:nowrap}
+tr:first-child:has(th+th) th{position:sticky;top:0;z-index:1;background:var(--info-bg);color:var(--info-tx);font-family:var(--fh);font-weight:700}
+tr:nth-child(even) td{background:var(--surface-2)}
+td small{display:inline-block;margin-top:3px;color:var(--muted);font-size:14.5px;line-height:1.5}
+
+/* ===== Lists, notes, callouts ===== */
+ul{margin:8px 0;padding-left:22px}
+li{margin:7px 0;padding-left:3px}
+li::marker{color:var(--c,var(--link))}
+.na{color:var(--muted);font-style:italic}
+.warn{position:relative;background:var(--cau-bg);color:var(--cau-tx);border:1px solid color-mix(in srgb,var(--cau) 45%,transparent);border-left:5px solid var(--cau);border-radius:14px;padding:14px 16px 14px 50px;margin:14px 0}
+.warn::before{content:"";position:absolute;left:16px;top:16px;width:22px;height:22px;background-color:var(--cau-tx);-webkit-mask:var(--i-warn) center/contain no-repeat;mask:var(--i-warn) center/contain no-repeat}
+.warn li::marker{color:var(--cau-tx)}
+.warn .na{color:inherit}
+.red{background:var(--em-bg);color:var(--em-tx);border:1px solid color-mix(in srgb,var(--em) 40%,transparent);border-left:5px solid var(--em);border-radius:14px;padding:14px 16px}
+
+/* ===== Result cards: semantic colour coding =====
+   #out children: 1 toolbar, 2 summary, 3 patient, 4 diagnosis, 5 treatment, 6 medicines, 7 food, 8 activity,
+   9 warning signs, 10 follow-up, [optional .warn], checklist (2nd last), reminder plan (last). */
+#out>.card{--c:var(--link);--cbg:var(--primary-100);--chip:#46714F;--ci:var(--c-brand);border-left:5px solid var(--c);background:linear-gradient(180deg,color-mix(in srgb,var(--cbg) 70%,var(--surface)) 0,var(--surface) 84px)}
+#out>.card:nth-child(3),#out>.card:nth-child(4),#out>.card:nth-child(6){--c:var(--info);--cbg:var(--info-bg);--chip:#3A7BD5;--ci:var(--c-info)}
+#out>.card:nth-child(10),#out>.card:last-child{--c:var(--cau);--cbg:var(--cau-bg);--chip:#E8A317;--ci:var(--c-cau)}
+#out>.card:nth-child(5),#out>.card:nth-child(7),#out>.card:nth-child(8),#out>.card:nth-last-child(2){--c:var(--ok);--cbg:var(--ok-bg);--chip:#2E9E5B;--ci:var(--c-ok)}
+/* Emergency: "Warning signs" card (9th child of #out) is the most prominent element */
+#out>.card:nth-child(9){--c:var(--em);--cbg:var(--em-bg);--chip:#D93025;--ci:var(--c-em);background:var(--em-bg);color:var(--em-tx);border:2px solid var(--em);border-left-width:6px;font-size:1.08em;box-shadow:0 0 0 4px color-mix(in srgb,var(--em) 13%,transparent),var(--sh2)}
+#out>.card:nth-child(9) h2{color:var(--em-tx);font-size:24px;font-weight:700}
+#out>.card:nth-child(9) li{font-weight:500}
+#out>.card:nth-child(9) li::marker{color:var(--em)}
+#out>.card:nth-child(9) .na{color:inherit}
+#out>.card:nth-child(9)::after{content:"Emergency? Call emergency services (112, or 108 for an ambulance in India) or go to the nearest hospital immediately.";display:block;margin-top:16px;padding:14px 16px 14px 58px;border-radius:14px;background:var(--em-solid) var(--c-phone) 18px center/26px no-repeat;color:#fff;font-weight:700;line-height:1.45;box-shadow:0 8px 20px -10px rgba(217,48,37,.7)}
+/* Card headings: title + semantic icon chip (+ collapse chevron). .cx is added by the visual helper script. */
+#out>.card>h2{margin-bottom:12px}
+#out .cx{display:flex;align-items:center;gap:10px;width:100%;min-height:44px;margin:0;padding:0;border:0;background:none;color:inherit;font:inherit;letter-spacing:inherit;text-align:left}
+#out button.cx{cursor:pointer;border-radius:10px}
+#out button.cx:focus-visible{outline:3px solid var(--link);outline-offset:4px}
+#out .cx::before{content:"";order:2;flex:none;margin-left:auto;width:32px;height:32px;border-radius:50%;background:var(--ci) center/20px no-repeat,var(--chip)}
+#out button.cx::after{content:"";order:3;flex:none;width:24px;height:24px;background-color:var(--muted);-webkit-mask:var(--i-chev) center/contain no-repeat;mask:var(--i-chev) center/contain no-repeat;transition:transform var(--t) var(--ease)}
+#out button.cx[aria-expanded=false]::after{transform:rotate(-90deg)}
+#out>.card.is-shut>h2{margin-bottom:0}
+@media screen{#out>.card.is-shut>:not(h2){display:none}}
+
+/* ===== Reminder message preview ===== */
+.msg{background:var(--surface);border:1px solid var(--border);border-radius:16px 16px 16px 6px;padding:14px 16px;margin:10px 0;white-space:pre-wrap;line-height:var(--lh);box-shadow:0 1px 2px rgba(46,74,55,.05)}
+.msg b{display:block;font-size:14px;color:var(--muted)}
+
+/* ===== Chat ===== */
+.chat{max-height:340px;overflow:auto;scroll-behavior:smooth;overscroll-behavior:contain;border-radius:16px;scrollbar-width:thin;scrollbar-color:var(--primary-200) transparent}
+.chat:not(:empty){background:var(--surface-2);border:1px solid var(--border);padding:12px;margin-top:12px}
+.chat>div{animation:pop .25s var(--ease) backwards}
+.u{text-align:right}
+.u span{display:inline-block;background:var(--btn);color:#fff;border-radius:18px 18px 6px 18px;padding:10px 15px;margin:5px 0;max-width:85%;text-align:left;overflow-wrap:anywhere;box-shadow:var(--bsh)}
+.a span{display:inline-block;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:18px 18px 18px 6px;padding:10px 15px;margin:5px 0;max-width:90%;white-space:pre-wrap;overflow-wrap:anywhere;box-shadow:0 1px 2px rgba(46,74,55,.06)}
+#chatsec>.row:last-child{flex-wrap:nowrap;gap:6px;margin-top:12px!important;padding:5px 5px 5px 6px;background:var(--surface);border:1.5px solid var(--border);border-radius:999px;transition:border-color var(--t) ease,box-shadow var(--t) ease}
+#chatsec>.row:last-child:focus-within{border-color:var(--link);box-shadow:var(--ring)}
+#q{min-width:0;border:0;background:transparent;box-shadow:none!important;border-radius:999px;padding-left:12px}
+#ask{flex:none;border-radius:999px;padding:10px 18px}
+#ask::after{content:"";width:18px;height:18px;background-color:currentColor;-webkit-mask:var(--i-send) center/contain no-repeat;mask:var(--i-send) center/contain no-repeat}
+
+/* ===== Checklist (Do's = green) ===== */
+label.ck{display:flex;gap:12px;align-items:flex-start;margin:6px 0;padding:11px 12px;min-height:48px;border-radius:12px;cursor:pointer;transition:background-color var(--t) ease}
+label.ck:hover{background:var(--surface-2)}
+label.ck:has(input:checked){background:var(--ok-bg)}
+label.ck input[type=checkbox]{-webkit-appearance:none;appearance:none;flex:none;width:24px;height:24px;margin:2px 0 0;border:2px solid var(--ok);border-radius:7px;background:var(--surface);display:grid;place-content:center;cursor:pointer;transition:background-color var(--t) ease,border-color var(--t) ease,transform .15s ease}
+label.ck input[type=checkbox]::before{content:"";width:11px;height:6px;margin-top:-3px;border-left:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(-45deg) scale(0);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+label.ck input[type=checkbox]:checked{background:#2E9E5B;border-color:#2E9E5B}
+label.ck input[type=checkbox]:checked::before{transform:rotate(-45deg) scale(1)}
+label.ck input[type=checkbox]:active{transform:scale(.9)}
+label.ck input[type=checkbox]:focus-visible{outline:none;box-shadow:var(--ring)}
+label.ck span{background:linear-gradient(currentColor,currentColor) 0 58%/0 2px no-repeat;transition:background-size .25s ease,color var(--t) ease}
+label.ck input:checked+span{background-size:100% 2px;color:var(--ok-tx)}
+
+/* ===== Loading: spinner, status pill, shimmer skeletons ===== */
+.hide{display:none!important}
+.sp{display:inline-block;width:18px;height:18px;border:0;border-radius:50%;background:conic-gradient(from 90deg,transparent 0 12%,var(--link));-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 3px));animation:r .8s linear infinite;vertical-align:-4px}
+@keyframes r{to{transform:rotate(360deg)}}
+#st:not(:empty),#ms:not(:empty){display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--primary-100);color:var(--primary-900);font-weight:500;animation:fade .2s ease backwards}
+#input:has(#st .sp)::after,#out>.card:has(#ms .sp) #ml::before{content:"";display:block;height:170px;margin-top:18px;border-radius:14px;border:1px solid var(--border);
+ background:
+ linear-gradient(100deg,transparent 20%,var(--shine) 50%,transparent 80%) -100% 0/50% 100% no-repeat,
+ linear-gradient(var(--sk) 0 0) 20px 22px/40% 18px no-repeat,
+ linear-gradient(var(--sk) 0 0) 20px 62px/86% 12px no-repeat,
+ linear-gradient(var(--sk) 0 0) 20px 86px/78% 12px no-repeat,
+ linear-gradient(var(--sk) 0 0) 20px 110px/82% 12px no-repeat,
+ linear-gradient(var(--sk) 0 0) 20px 134px/55% 12px no-repeat,
+ var(--surface-2);
+ animation:shimmer 1.4s linear infinite}
+@keyframes shimmer{to{background-position:200% 0,20px 22px,20px 62px,20px 86px,20px 110px,20px 134px,0 0}}
+/* chat typing dots (reuses the .sp element inside an AI bubble) */
+.a .sp{position:relative;width:8px;height:8px;margin:0 14px;border-radius:50%;background:var(--primary-200);-webkit-mask:none;mask:none;vertical-align:middle;animation:tdot 1.2s ease-in-out .15s infinite}
+.a .sp::before,.a .sp::after{content:"";position:absolute;top:0;width:8px;height:8px;border-radius:50%;background:var(--primary-200);animation:tdot 1.2s ease-in-out infinite}
+.a .sp::before{left:-13px}
+.a .sp::after{left:13px;animation-delay:.3s}
+
+/* ===== Footer disclaimer: soft info box with shield ===== */
+.w>p.na:last-child{display:flex;gap:12px;align-items:flex-start;max-width:660px;margin:28px auto 8px!important;padding:14px 18px;border-radius:14px;background:var(--info-bg);border:1px solid color-mix(in srgb,var(--info) 30%,transparent);color:var(--muted-2);font-style:normal;font-size:15.5px;line-height:1.6;text-align:left!important}
+.w>p.na:last-child::before{content:"";flex:none;width:24px;height:24px;margin-top:1px;background-color:var(--info-tx);-webkit-mask:var(--i-shield) center/contain no-repeat;mask:var(--i-shield) center/contain no-repeat}
+
+/* ===== Motion (150-250ms interactions; short entrance animations) ===== */
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes fadeD{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:translateY(6px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes tdot{0%,80%,100%{background-color:var(--primary-200);transform:translateY(0)}40%{background-color:var(--link);transform:translateY(-3px)}}
+#welcome{animation:rise .45s var(--ease) .05s backwards}
+#chatsec{animation:rise .45s var(--ease) .12s backwards}
+#input:not(.hide){animation:rise .4s var(--ease) backwards}
+#tup:not(.hide),#ttx:not(.hide){animation:fade .2s ease backwards}
+#out:not(.hide)>*{animation:rise .4s var(--ease) backwards}
+#out>:nth-child(2){animation-delay:.04s}#out>:nth-child(3){animation-delay:.08s}#out>:nth-child(4){animation-delay:.12s}
+#out>:nth-child(5){animation-delay:.16s}#out>:nth-child(6){animation-delay:.20s}#out>:nth-child(7){animation-delay:.24s}
+#out>:nth-child(8){animation-delay:.28s}#out>:nth-child(9){animation-delay:.32s}#out>:nth-child(10){animation-delay:.36s}
+#out>:nth-child(11){animation-delay:.40s}#out>:nth-child(12){animation-delay:.44s}#out>:nth-child(n+13){animation-delay:.48s}
+#ml>.sch{animation:pop .3s var(--ease) backwards}
+#ml>.sch:nth-child(2){animation-delay:.06s}#ml>.sch:nth-child(3){animation-delay:.12s}#ml>.sch:nth-child(4){animation-delay:.18s}
+
+
+/* ===== Redesign: floating glass nav, two-column hero, soft rounded sections ===== */
+header{position:sticky;top:max(8px,env(safe-area-inset-top,0px));z-index:30;background:var(--glass);-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);border-color:color-mix(in srgb,var(--border) 75%,transparent);border-radius:22px;box-shadow:0 1px 2px rgba(46,74,55,.04),0 14px 34px -22px rgba(46,74,55,.35)}
+@media (min-width:780px){header{padding:10px 12px 10px 18px;gap:18px}}
+.logo{column-gap:11px;text-decoration:none}
+.logo .mark{width:54px;height:54px;border-radius:0;box-shadow:none;filter:drop-shadow(0 4px 8px rgba(46,74,55,.16))}
+.logo .mark .r1{stop-color:var(--link)}.logo .mark .r2{stop-color:var(--primary-900)}
+.logo .wm{font:600 25px/1.05 var(--fh);letter-spacing:-.015em;color:var(--primary-900)}
+.logo .ai{display:inline-block;margin-left:2px;color:var(--plus);font:700 .72em/1 var(--fb);transform:translateY(-.55em)}
+.logo small{font:600 11.5px/1.4 var(--fb);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.nl{display:none}
+@media (min-width:1060px){.nl{display:flex;gap:28px;margin-left:auto;margin-right:4px}}
+.nl a{position:relative;padding:8px 0;color:var(--muted-2);font-weight:500;font-size:15.5px;text-decoration:none;transition:color var(--t) ease}
+.nl a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;border-radius:2px;background:var(--link);transform:scaleX(0);transform-origin:left;transition:transform var(--t) var(--ease)}
+.nl a:hover{color:var(--primary-900)}.nl a:hover::after{transform:scaleX(1)}
+.nl a:focus-visible{outline:3px solid var(--link);outline-offset:3px;border-radius:4px}
+.btn:not(.s){background-image:linear-gradient(135deg,var(--btn-h),var(--btn))}
+.btn:not(.s):hover{background-image:none}
+a.btn{text-decoration:none}
+.card{border-radius:24px}
+@media (min-width:640px){.card{padding:30px 32px}}
+#input,#chatsec,#out{max-width:900px;margin-left:auto;margin-right:auto}
+#out>.card{border-radius:22px}
+#input,#chatsec,#out,#out>.card{scroll-margin-top:110px}
+
+/* Hero */
+#welcome{display:grid;gap:34px;align-items:center;margin-top:18px;border:1px solid color-mix(in srgb,var(--primary-200) 70%,transparent);border-radius:32px;padding:34px 20px 30px;box-shadow:none}
+@media (hover:hover){#welcome:hover{translate:none;box-shadow:none}}
+@media (min-width:640px){#welcome{padding:52px 44px}}
+@media (min-width:940px){#welcome{padding:72px 64px 76px}}
+#welcome .hx{max-width:760px;margin:0 auto;text-align:center}#welcome .hx>p{margin-left:auto;margin-right:auto}#welcome .hc,#welcome .trust{justify-content:center}
+#welcome h1{font:500 clamp(40px,6.2vw,64px)/1.04 var(--fh);letter-spacing:-.03em;margin:18px 0 20px;font-variation-settings:"opsz" 144}
+#welcome h1 em{font-style:italic;font-weight:400;color:var(--link)}
+body:has(#lang option[value]:checked) #welcome h1{line-height:1.25}
+.pill{display:inline-flex;align-items:center;gap:9px;margin:0!important;padding:6px 15px 6px 12px;border-radius:999px;background:var(--primary-100);border:1px solid var(--primary-200);color:var(--primary-900);font-size:14.5px;font-weight:600}
+.pill>span{width:8px;height:8px;border-radius:50%;background:var(--link);box-shadow:0 0 0 0 color-mix(in srgb,var(--link) 45%,transparent);animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--link) 45%,transparent)}80%,100%{box-shadow:0 0 0 9px transparent}}
+.hc{gap:12px;margin-top:26px}
+#welcome #start{margin-top:0}
+#welcome .btn.s{min-height:56px;padding:14px 26px;font-size:17.5px;background:var(--surface);border-color:var(--primary-200);color:var(--primary-900);box-shadow:var(--sh)}
+#welcome .btn.s:hover{background:var(--primary-100);border-color:var(--link)}
+.trust{display:flex;flex-wrap:wrap;gap:10px 22px;list-style:none;margin:26px 0 0;padding:0;color:var(--muted-2);font-size:14.5px;font-weight:500}
+.trust li{display:flex;align-items:center;gap:8px;margin:0;padding:0}
+.trust li::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;background:var(--btn) var(--c-ok) center/12px no-repeat;box-shadow:0 0 0 3px var(--primary-100)}
+.hv{position:relative;margin:0 6px}
+.hv>svg{display:block;width:100%;height:auto;border-radius:28px;filter:var(--ill);box-shadow:0 2px 6px rgba(46,74,55,.08),0 30px 60px -28px rgba(46,74,55,.45);outline:1px solid color-mix(in srgb,var(--border) 60%,transparent);outline-offset:-1px}
+.fc{position:absolute;display:flex;align-items:center;gap:11px;padding:11px 16px 11px 11px;border-radius:18px;background:var(--surface);border:1px solid var(--border);box-shadow:var(--sh2);font-size:13px;line-height:1.35;color:var(--muted);animation:bob 6s ease-in-out infinite}
+.fc b{display:block;color:var(--primary-900);font-size:14.5px;font-weight:600}
+.fc i{flex:none;width:38px;height:38px;border-radius:12px;background:var(--primary-100)}
+.fc i::before{content:"";display:block;width:100%;height:100%;background-color:var(--link);-webkit-mask:var(--fm) center/20px no-repeat;mask:var(--fm) center/20px no-repeat}
+.fi1{--fm:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'%3E%3Crect x='3' y='8' width='18' height='8' rx='4' transform='rotate(-35 12 12)'/%3E%3Cpath d='m9.7 8.7 4.6 6.6'/%3E%3C/svg%3E")}
+.fi2{--fm:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9a6 6 0 0 1 12 0c0 5 2 6.5 2 6.5H4S6 14 6 9zM10 19a2 2 0 0 0 4 0'/%3E%3C/svg%3E")}
+.fc.fb i{background:color-mix(in srgb,var(--accent-gold) 30%,var(--surface))}.fc.fb i::before{background-color:var(--plus)}
+.fa{left:-10px;bottom:-22px}
+.fb{right:-10px;top:-20px;animation-delay:-3s}
+@media (max-width:520px){.fa{left:6px;bottom:-26px}.fb{right:6px;top:-24px}.fc{padding:9px 12px 9px 9px}.fc i{width:32px;height:32px}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+#welcome .hv{margin-top:14px;margin-bottom:18px}
+@media (min-width:940px){#welcome .hv{margin:0}}
+
+/* ===== Small screens ===== */
+@media (max-width:420px){
+ .logo small{font-size:12.5px}
+ .lp button{padding:6px 11px;font-size:14.5px}
+ .tabs button{padding:10px 8px;font-size:15px}
+ .u span{max-width:92%}.a span{max-width:95%}
+ #out>.card:nth-child(9) h2{font-size:21px}
+}
+
+/* ===== Accessibility: reduced motion ===== */
+@media (prefers-reduced-motion:reduce){
+ html,.chat{scroll-behavior:auto}
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.01ms!important}
+ .sp{animation-duration:1.6s!important;animation-iteration-count:infinite!important}
+ .card:hover{translate:none}.btn:hover,.btn:active,.drop.is-drag,.drop:hover .dic{transform:none}
+}
+
+/* ===== Print ===== */
+@media print{
+ header,.noprint,.hv,.hc,.trust{display:none}
+ :root:root:root{--bg:#fff;--surface:#fff;--surface-2:#f7faf9;--text:#111;--muted:#444;--muted-2:#333;--link:#3A5F42;--primary-900:#2E4A37;--primary-100:#eef3e8;--primary-50:#f8f9f3;--primary-200:#d9e4d1;--border:#d6cfbe;
+  --ok:#2E9E5B;--ok-bg:#fff;--ok-tx:#111;--cau:#E8A317;--cau-bg:#fff8e8;--cau-tx:#5c3300;--info:#3A7BD5;--info-bg:#f2f7fe;--info-tx:#1F4F94;--em:#D93025;--em-bg:#fdf0f0;--em-tx:#7a1414;--em-solid:#D93025;color-scheme:light}
+ body{background:#fff;font-size:12pt}
+ body::before,#welcome::before,#welcome::after{display:none}
+ *,*::before,*::after{animation:none!important;transition:none!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .w{max-width:none;padding:0}
+ .card,#out>.card{box-shadow:none!important;translate:none;border-radius:12px;background:#fff}
+ #out>.card:nth-child(9){background:var(--em-bg)}
+ #out button.cx::after{display:none}
+ .sc{overflow:visible}table{min-width:0}.chat{max-height:none}
+ .btn{box-shadow:none}
+ h2{break-after:avoid}.sch,.warn,tr,label.ck{break-inside:avoid}
+}
+</style>
+</style></head><body id="top"><div class="w">
+<header><div class="logo"><span class="mark" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" focusable="false"><defs><linearGradient id="cbh" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A7C9A6"/><stop offset=".45" stop-color="#6E9C72"/><stop offset="1" stop-color="#355E45"/></linearGradient><linearGradient id="cbr" x1="0" y1="0" x2="0" y2="1"><stop class="r1" offset="0" stop-color="#46714F"/><stop class="r2" offset="1" stop-color="#2A4433"/></linearGradient><linearGradient id="cbw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF8"/><stop offset="1" stop-color="#E7EFDF"/></linearGradient><linearGradient id="cbp" x1="0" y1="0" x2="1" y2=".6"><stop offset="0" stop-color="#F6D7BC"/><stop offset=".55" stop-color="#E2AC88"/><stop offset="1" stop-color="#C07F5F"/></linearGradient><linearGradient id="cbs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5C8A64"/><stop offset="1" stop-color="#2E4A37"/></linearGradient><filter id="cbd" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1.6" stdDeviation="1.4" flood-color="#1F3527" flood-opacity=".28"/></filter></defs><g filter="url(#cbd)"><path d="M52 99C30 86 11 69 11 45 11 28 23 16 38 16c9.6 0 17.2 5 22 12.6C64.8 21 72.4 16 82 16c15 0 27 12 27 29 0 8.6-2.6 16-7 22.6" fill="none" stroke="url(#cbh)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g><path d="M20 34c2.4-7.6 8.8-12.6 16.6-12.8M70 23.4c3.4-1.8 7.2-2.6 11-2.4" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2.6" stroke-linecap="round"/><g filter="url(#cbd)" transform="translate(0 4)"><path d="M41 58 60 42.5 79 58v26H41z" fill="url(#cbw)"/><rect x="72" y="38" width="6.5" height="14" rx="1.4" fill="url(#cbr)"/><path d="M35 61 60 40.5 85 61" fill="none" stroke="url(#cbr)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><rect x="52.5" y="58" width="15" height="14" rx="2" fill="url(#cbs)"/><path d="M60 59.5v11M54 65h12" stroke="#FFF3E4" stroke-width="1.7"/></g><g filter="url(#cbd)"><path d="M37 91.6C48 88.8 62 88 75.6 88c5.6 0 9.6-2.2 12.6-6.2 1.8-2.6 6-2.2 6.2 1.4.2 3.2-1.4 6-3.6 8.4L104 86l3 12.4c-11 5.4-23 8.2-36 8-12.6-.2-23.4-4.2-33-9.2-3-1.6-3-4.8-1-5.6z" fill="url(#cbp)"/><path d="M102.6 85.2 113 80.6l4 18.4-10.4 3.4z" fill="url(#cbs)"/></g><path d="M41.6 96.4c8.4 2.6 16.8 3.8 25.4 3.6M45 93.4c7.4 1.6 14.6 2.4 22 2.2M90.6 91.6c-4 2.2-8.6 3.4-13.4 3.6" fill="none" stroke="#A86848" stroke-opacity=".5" stroke-width="1.1" stroke-linecap="round"/><path d="M50 90.4c9-1.4 18-1.8 26-1.6" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5" stroke-linecap="round"/><path d="M104.8 86.4l2.6 11" stroke="#fff" stroke-opacity=".25" stroke-width="1.4" stroke-linecap="round"/></svg></span><span class="wm">CareBridge<span class="ai" aria-hidden="true">+</span></span><small>From Hospital to Home</small></div>
+<nav class="nl" aria-label="Sections"><a href="#top">Home</a><a href="#input" data-open>Simplify a summary</a><a href="#chatsec">Ask CareBridge</a></nav>
+<div class="row"><label for="lang" class="na">Language</label><select id="lang"><option>English</option><option value="Hindi">हिन्दी (Hindi)</option><option value="Bengali">বাংলা (Bengali)</option><option value="Telugu">తెలుగు (Telugu)</option><option value="Tamil">தமிழ் (Tamil)</option></select>
+<div class="lp" role="group" aria-label="Language"><button type="button" data-v="English" lang="en">English</button><button type="button" data-v="Hindi" lang="hi">हिन्दी</button><button type="button" data-v="Bengali" lang="bn">বাংলা</button><button type="button" data-v="Telugu" lang="te">తెలుగు</button><button type="button" data-v="Tamil" lang="ta">தமிழ்</button></div></div></header>
+
+<section id="welcome" class="card">
+<div class="hx">
+<p class="pill"><span aria-hidden="true"></span>Hello, and welcome</p>
+<h1>From hospital to <em>home</em>, in simple words</h1>
+<p>I help you and your family understand a hospital discharge summary in simple words, organise medicines and follow-up visits, and prepare friendly reminder messages.</p>
+<p class="na">I only use what is written in your document. I never guess doses or dates, and I do not replace your doctor.</p>
+<div class="row hc"><button class="btn" id="start">Get started</button><a class="btn s" href="#chatsec">Ask a question</a></div>
+<ul class="trust"><li>English, हिन्दी, বাংলা, తెలుగు, தமிழ்</li><li>Medicines &amp; warning signs</li><li>WhatsApp reminders</li></ul>
+</div>
+</section>
+
+<section id="input" class="card hide">
+<h2>1. Share your discharge summary</h2>
+<div class="tabs" id="itabs"><button class="on" data-t="up">Upload PDF / photo</button><button data-t="tx">Type or paste</button></div>
+<div id="tup"><div class="drop" id="drop"><span class="dic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 17v-6M9.5 13.5 12 11l2.5 2.5"/></svg></span>Tap to choose a PDF or image(s) of the discharge summary<input id="file" type="file" accept="application/pdf,image/*" multiple hidden></div><p id="fl" class="na"></p></div>
+<div id="ttx" class="hide"><textarea id="txt" placeholder="Paste or type the details: diagnosis, treatment, medicines, diet, follow-up…"></textarea></div>
+<p class="na">🔒 Your document is processed only to create this summary. Avoid sharing more personal details than needed.</p>
+<div class="row"><button class="btn" id="go">Simplify my summary</button><button class="btn s" id="demo">Try a sample</button><span id="st"></span></div>
+</section>
+
+<section id="out" class="hide"></section>
+<section class="card" id="chatsec"><h2>💬 Ask me anything</h2><p class="na">Ask about your discharge summary, a medical term, or any other question at all. I’ll answer in simple words. If you have uploaded a summary, I’ll use it when your question relates to it.</p><div class="chat" id="chat"></div><div class="row" style="margin-top:8px"><input type="text" id="q" placeholder="Ask me anything…" style="flex:1"><button class="btn" id="ask">Ask</button></div></section>
+<p class="na" style="text-align:center;margin-top:24px">CareBridge is not a doctor and does not give medical advice. Please confirm anything unclear with your doctor or hospital.</p>
+</div>
+<script>
+/* Outside claude.ai there is no window.claude, so provide the same small API backed by the /api/ai Netlify Function. */
+(()=>{if(window.claude)return;
+ const toImg=b=>new Promise((res,rej)=>{const u=URL.createObjectURL(b),im=new Image();
+  im.onload=()=>{const m=1600,k=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement("canvas");
+   c.width=Math.round(im.width*k);c.height=Math.round(im.height*k);c.getContext("2d").drawImage(im,0,0,c.width,c.height);
+   URL.revokeObjectURL(u);res({type:"image/jpeg",data:c.toDataURL("image/jpeg",.85).split(",")[1]})};
+  im.onerror=()=>{URL.revokeObjectURL(u);rej({message:"Could not read an image"})};im.src=u});
+ async function call(prompt,o,json){o=o||{};
+  const images=o.images&&o.images.length?await Promise.all(o.images.slice(0,6).map(toImg)):[];
+  const body=JSON.stringify({prompt,images,json:!!json});
+  const t=await viaJob(body);if(t!==null)return t;
+  let r;try{r=await fetch("/api/ai",{method:"POST",headers:{"content-type":"application/json"},body})}
+  catch(e){throw{message:"Could not reach the AI service. Check your internet connection"}}
+  if(!r.ok){let m="The AI service is unavailable right now";try{m=(await r.json()).error||m}catch(e){}throw{message:m}}
+  const x=await r.text();if(x.includes("\u0000ERROR"))throw{message:"The AI could not finish its answer"};return x}
+ /* Long answers run as a background job (no 30-second cut-off): start the job, wake the worker, poll for the result.
+    Returns null when jobs are unavailable, so the caller falls back to the direct /api/ai stream. */
+ async function viaJob(body){const H={"content-type":"application/json"},wait=ms=>new Promise(r=>setTimeout(r,ms));
+  let id;try{const r=await fetch("/api/ai-job",{method:"POST",headers:H,body});if(!r.ok)return null;id=(await r.json()).id;
+   const w=await fetch("/api/ai-worker",{method:"POST",headers:H,body:JSON.stringify({id})});if(w.status!==202)return null}catch(e){return null}
+  const t0=Date.now();let miss=0;
+  while(Date.now()-t0<600000){await wait(Date.now()-t0<20000?1200:2500);let j;
+   try{const r=await fetch("/api/ai-job?id="+encodeURIComponent(id),{cache:"no-store"});j=await r.json()}catch(e){if(++miss>8)throw{message:"Could not reach the AI service. Check your internet connection"};continue}
+   miss=0;if(j.status==="done")return j.text;if(j.status==="error")throw{message:j.error||"The AI could not finish its answer"};
+   if(j.status==="missing")throw{message:"The AI request was lost. Please try again"};
+   if(j.status==="queued"&&Date.now()-t0>25000)return null}
+  throw{message:"The AI is taking too long. Please try again"}}
+ const sample=async(p,o)=>({text:(await call(p,o,false)).trim()});
+ sample.json=async(p,o)=>{const t=await call(p,o,true),a=t.indexOf("{"),b=t.lastIndexOf("}");
+  try{return JSON.parse(t.slice(a,b+1))}catch(e){throw{message:"The AI reply could not be read"}}};
+ sample.limits=async()=>({images:true});
+ const downloads={save:async({filename,data})=>{const u=URL.createObjectURL(new Blob([data],{type:"text/plain;charset=utf-8"})),a=document.createElement("a");
+  a.href=u;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1000)}};
+ window.claude={use:async n=>n==="sample"?sample:n==="downloads"?downloads:null};
+})();
+</script>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let sample=null,dl=null,S={imgs:[],pdfText:"",D:null,hist:[],msgs:[]};
+(async()=>{try{if(window.claude){sample=await claude.use("sample");dl=await claude.use("downloads")}}catch(e){}})();
+const NA='<span class="na">Not mentioned in the document – please confirm with your doctor.</span>';
+const SYS=`You are CareBridge, an empathetic healthcare communication assistant and patient-education specialist. Simplify hospital discharge documents for patients and caregivers with little medical knowledge. Rules: use ONLY information in the document; NEVER invent diagnoses, medicines, dosages, timings or dates; if something is missing write exactly "Not mentioned"; do not diagnose, prescribe or change doses; use short everyday sentences and simple analogies for medical terms; be warm and reassuring.`;
+const L=()=>$("#lang").value;
+const LN=()=>L()==="English"?"English":L()+" (use native script; keep medicine names and numbers recognisable)";
+function busy(el,on,t){el.innerHTML=on?'<span class="sp"></span> '+(t||"Working…"):""}
+$("#start").onclick=()=>{$("#welcome").classList.add("hide");$("#input").classList.remove("hide")};
+$("#itabs").onclick=e=>{const t=e.target.dataset.t;if(!t)return;[...$("#itabs").children].forEach(b=>b.classList.toggle("on",b===e.target));$("#tup").classList.toggle("hide",t!=="up");$("#ttx").classList.toggle("hide",t!=="tx")};
+$("#drop").onclick=()=>$("#file").click();
+$("#demo").onclick=()=>{$("#itabs").children[1].click();$("#txt").value="Discharge Summary. Diagnosis: Acute gastroenteritis. Treatment: IV fluids and antiemetics during 2 days of admission. Discharge medicines: Tab Ondansetron 4 mg twice a day before food for 3 days; ORS sachet after every loose stool. Advice: oral rehydration, soft bland diet (rice, banana, curd), avoid oily/spicy food and outside water. Rest for 3 days. Return urgently if persistent vomiting, blood in stool or high fever. Follow-up: visit the hospital after five days."};
+$("#file").onchange=async e=>{S.imgs=[];S.pdfText="";const fs=[...e.target.files];$("#fl").textContent=fs.map(f=>f.name).join(", ");
+ const lim=sample?await sample.limits().catch(()=>null):null;
+ for(const f of fs){try{
+  if(f.type.startsWith("image/"))S.imgs.push(f);
+  else if(f.type==="application/pdf"&&window.pdfjsLib){
+   pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+   const pdf=await pdfjsLib.getDocument({data:await f.arrayBuffer()}).promise;let t="";
+   for(let i=1;i<=pdf.numPages;i++){const p=await pdf.getPage(i);t+=(await p.getTextContent()).items.map(x=>x.str).join(" ")+"\n"}
+   if(t.trim().length>80)S.pdfText+=t;
+   else if(lim&&lim.images){for(let i=1;i<=Math.min(pdf.numPages,4);i++){const p=await pdf.getPage(i),v=p.getViewport({scale:1.5}),c=document.createElement("canvas");c.width=v.width;c.height=v.height;await p.render({canvasContext:c.getContext("2d"),viewport:v}).promise;S.imgs.push(await new Promise(r=>c.toBlob(r,"image/jpeg",.8)))}}
+  }}catch(err){$("#fl").textContent="Could not read "+f.name+". Please try a clearer file or paste the text."}}};
+async function ask(prompt,imgs){if(!sample)throw{message:"AI is not available in this view. Open the page from claude.ai."};
+ return sample.json(prompt,{cache:false,images:imgs&&imgs.length?imgs:undefined})}
+async function analyse(){
+ const text=($("#txt").value+"\n"+S.pdfText).trim();
+ if(!text&&!S.imgs.length){$("#st").textContent="Please upload a file or enter some text first.";return}
+ busy($("#st"),true,"Reading your document…");$("#go").disabled=true;
+ const prompt=SYS+`\nWrite all patient-facing text values in ${LN()}. Return ONLY JSON (keys in English):
+{"patient":{"name":"","age":"","gender":"","hospital":"name and town/city as written","hospitalPhone":"","doctor":"","department":"","admission":"","discharge":""},
+"diagnosis":[{"term":"as written","simple":"plain meaning with an everyday example"}],
+"treatment":["..."],
+"medications":[{"name":"","dosage":"","timing":"","instructions":"","purpose":""}],
+"diet":["..."],"activity":["..."],"warningSigns":["..."],
+"followUp":[{"when":"as written, e.g. after five days; do not compute dates","details":""}],
+"simpleSummary":["short bullet sentences"],"checklist":["important to-dos"],
+"missing":["important things not in the document that the patient should confirm"]}
+Use "Not mentioned" for any missing field. Arrays may be empty.\nDOCUMENT TEXT:\n${text||"(see attached images)"}`;
+ try{S.D=await ask(prompt,S.imgs);S.msgs=[];S.hist=[];render();$("#st").textContent=""}
+ catch(e){$("#st").textContent="Sorry, something went wrong: "+(e.message||e.code||"unknown")+". Please try again."}
+ $("#go").disabled=false}
+$("#go").onclick=analyse;$("#ask").onclick=chat;$("#q").onkeydown=e=>{if(e.key==="Enter")chat()};
+$("#lang").onchange=()=>{if(S.D)analyse()};
+const nm=v=>!v||/^not mentioned$/i.test(String(v).trim())?NA:esc(v);
+const ul=a=>a&&a.length?"<ul>"+a.map(x=>"<li>"+esc(x)+"</li>").join("")+"</ul>":'<p>'+NA+'</p>';
+function sec(t,b,c){return `<div class="card ${c||""}"><h2>${t}</h2>${b}</div>`}
+function render(){const D=S.D,p=D.patient||{};
+ const pi=Object.entries({Name:p.name,Age:p.age,Gender:p.gender,Hospital:p.hospital,Doctor:p.doctor,Admitted:p.admission,Discharged:p.discharge}).map(([k,v])=>`<tr><th>${k}</th><td>${nm(v)}</td></tr>`).join("");
+ const meds=(D.medications||[]).map(m=>`<tr><td><b>${nm(m.name)}</b><br><small>${esc(m.purpose&&!/not mentioned/i.test(m.purpose)?m.purpose:"")}</small></td><td>${nm(m.dosage)}</td><td>${nm(m.timing)}</td><td>${nm(m.instructions)}</td></tr>`).join("");
+ $("#out").classList.remove("hide");
+ $("#out").innerHTML=`<div class="row noprint"><button class="btn s" id="cps">📋 Copy summary</button><button class="btn s" id="dls">⬇️ Download</button><button class="btn s" onclick="print()">🖨️ Print</button><span id="cm" class="na"></span></div>
+ <div class="card"><h2>📝 Your summary in simple words</h2>${ul(D.simpleSummary)}</div>
+ ${sec("👤 Patient information",`<div class="sc"><table>${pi}</table></div>`)}
+ ${sec("🩺 Diagnosis explained",(D.diagnosis||[]).length?D.diagnosis.map(d=>`<p><b>${esc(d.term)}</b><br>${esc(d.simple)}</p>`).join(""):"<p>"+NA+"</p>")}
+ ${sec("🏥 Treatment received",ul(D.treatment))}
+ ${sec("💊 Medicine schedule",meds?`<div class="sc"><table><tr><th>Medicine</th><th>Dose</th><th>Timing</th><th>Instructions</th></tr>${meds}</table></div><p class="na">Taken exactly from your document. Do not change doses without asking your doctor.</p>`:"<p>"+NA+"</p>")}
+ ${sec("🥣 Food &amp; drink advice",ul(D.diet))}${sec("🚶 Activity &amp; rest",ul(D.activity))}
+ ${sec("🚨 Warning signs – seek medical help",ul(D.warningSigns),"")}
+ ${sec("📅 Follow-up",(D.followUp||[]).length?ul(D.followUp.map(f=>f.when+(f.details&&!/not mentioned/i.test(f.details)?" – "+f.details:""))):"<p>"+NA+"</p>")}
+ ${(D.missing||[]).length?`<div class="warn"><b>Please confirm with your hospital:</b>${ul(D.missing)}</div>`:""}
+ ${sec("✅ Your checklist",(D.checklist||[]).map(c=>`<label class="ck"><input type="checkbox"> <span>${esc(c)}</span></label>`).join("")||"<p>"+NA+"</p>")}
+ <div class="card"><h2>⏰ Follow-up reminder plan</h2>
+ <p>Tell me your WhatsApp number and the follow-up date. I will write messages that start <b>2 days before</b>, then <b>1 day before</b> and <b>on the day</b>, and link each one to your calendar.</p>
+ ${(D.followUp||[]).length&&!/not mentioned/i.test(D.followUp[0].when)?`<div class="warn">Your document says: <b>${esc(D.followUp[0].when)}</b>. Please confirm the exact date with your hospital, then enter it below.</div>`:`<div class="warn">No follow-up timing was found in the document. Please confirm it with your hospital.</div>`}
+ <div class="row" style="margin-top:10px"><label class="fl">Follow-up date<input type="date" id="fd"></label><label class="fl">Time (optional)<input type="time" id="ft"></label></div>
+ <div class="row" style="margin-top:8px"><input type="text" id="ph" inputmode="tel" autocomplete="tel" placeholder="WhatsApp number, e.g. +91 98765 43210" style="flex:1;min-width:200px"></div>
+ <p class="na">🔒 Contact details stay on your device. They are not stored or shared with the AI. A 10-digit number is treated as Indian (+91).</p>
+ <div class="row"><button class="btn" id="gm">✨ Create reminder plan</button><span id="ms"></span></div>
+ <div id="ml"></div>
+ <div class="row noprint"><button class="btn s" id="cpm" disabled>Copy messages</button><button class="btn s" id="dlm" disabled>Download messages</button><span id="cs" class="na"></span></div>
+ <p class="na">CareBridge cannot send or schedule messages by itself because no messaging service is connected. Each reminder opens your own WhatsApp with the message ready, and the calendar buttons add a dated reminder to Google or Outlook Calendar so your phone alerts you.</p></div>`;
+ $("#gm").onclick=genMsg;
+ $("#cps").onclick=()=>copy(sumText(),$("#cm"));$("#dls").onclick=()=>save("CareBridge-summary.txt",sumText(),$("#cm"));
+ $("#out").scrollIntoView({behavior:"smooth"})}
+const p2=n=>String(n).padStart(2,'0'),ds=d=>d.getFullYear()+p2(d.getMonth()+1)+p2(d.getDate())+'T'+p2(d.getHours())+p2(d.getMinutes())+'00',iso=d=>d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate())+'T'+p2(d.getHours())+':'+p2(d.getMinutes())+':00';
+const fmt=d=>d.toLocaleDateString(undefined,{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+async function genMsg(){
+ const fd=$('#fd').value,ut=$('#ft').value,st=$('#ms'),ch='WhatsApp';
+ if(!fd){st.textContent=' Please enter the follow-up date first.';return}
+ const base=new Date(fd+'T00:00:00'),today=new Date();today.setHours(0,0,0,0);
+ const stages=[[2,'2 days before'],[1,'1 day before'],[0,'On the day']].map(([n,l])=>{const d=new Date(base);d.setDate(d.getDate()-n);return{n,l,d}}).filter(x=>x.d>=today);
+ if(!stages.length){st.textContent=' That date has already passed. Please pick an upcoming date.';return}
+ S.fu={date:base,time:ut||'10:00'};busy(st,true,'Writing…');
+ const P=S.D.patient||{},ok=v=>v&&!/not mentioned/i.test(v)?v:'';
+ const t12=ut?(([h,m])=>((+h%12)||12)+':'+m+' '+(+h<12?'AM':'PM'))(ut.split(':')):'';
+ const prompt=SYS+`\nWrite ${stages.length} ${ch} follow-up appointment reminder messages in ${LN()} for the patient, one for each stage below, in this order. Use a formal, courteous, caring hospital patient-care tone. Plain text only: no emojis, no symbols, no markdown, no asterisks. Follow this exact structure, with a blank line between blocks (translate the headings into ${LN()} if it is not English):
+Dear <Mr./Ms. if the gender is known><patient name, or "Patient" if not given>,
+
+This is a gentle reminder that your follow-up consultation is scheduled <for today / for tomorrow / in 2 days, as the stage requires>.
+
+Appointment Details:
+- Date: <date>
+- Time: <time>   (leave this line out if no time is given)
+- Hospital: <hospital>   (only if given)
+- Doctor: <doctor>   (only if given; add "Dr." if missing)
+- Department: <department>   (only if given)
+
+Before Your Visit, Kindly Remember:
+1. Please carry your previous medical reports, investigation results and diagnostic test records.
+2. Bring your discharge summary and previously prescribed medication list.
+3. Carry your current medicines or prescriptions for the doctor's review.
+4. Please arrive 15–20 minutes before your scheduled appointment to complete the necessary registration formalities.
+5. If any new symptoms or health concerns have developed since your last visit, kindly inform the doctor.
+
+Appointment Confirmation:
+If you are unable to attend or need to reschedule your appointment, please contact the hospital<" at " + hospital phone, only if given> to confirm your visit and check the available alternatives.
+
+We look forward to assisting you with your continued recovery and care.
+
+Warm regards,
+Patient Care Team
+<hospital name, only if given>
+
+This is an automated follow-up reminder generated via CareBridge.
+Facts you may use: date ${fmt(base)}; time ${t12||'not given'} (no other time); patient: ${ok(P.name)||'not given'}; gender: ${ok(P.gender)||'not given'}; hospital: ${ok(P.hospital)||'not given'}; hospital phone: ${ok(P.hospitalPhone)||'not given'}; doctor: ${ok(P.doctor)||'not given'}; department: ${ok(P.department)||'not given'}. Never invent names, times, places, phone numbers or advice; leave out any line whose fact is not given. Stages: ${JSON.stringify(stages.map(x=>({stage:x.l,daysToGo:x.n})))}. Return ONLY JSON: {"messages":[{"text":""}]} with exactly ${stages.length} items.\nDATA:${JSON.stringify(S.D)}`;
+ try{const r=await ask(prompt);const ms=(r.messages||[]).slice(0,stages.length);
+  S.msgs=ms.map((m,i)=>({title:stages[i].l+' – '+fmt(stages[i].d),text:clean(m.text),date:stages[i].d,label:stages[i].l}));
+  $('#ml').innerHTML=`<div class="sch"><b>🏥 Follow-up visit · ${esc(fmt(base))}${t12?' · '+esc(t12):''}</b><div class="row cal"><button class="btn s" onclick="calOpen(-1,'g')">📅 Google Calendar</button><button class="btn s" onclick="calOpen(-1,'o')">📅 Outlook</button></div></div>`+S.msgs.map((m,i)=>`<div class="sch"><b>🔔 ${esc(m.label)} · ${esc(fmt(m.date))}</b><div class="msg">${fmtMsg(m.text)}</div><div class="row cal"><button class="btn" onclick="openVia(${i})">Send via ${esc(ch)}</button><button class="btn s" onclick="calOpen(${i},'g')">📅 Google Calendar</button><button class="btn s" onclick="calOpen(${i},'o')">📅 Outlook</button></div></div>`).join('');
+  $('#cpm').disabled=$('#dlm').disabled=false;$('#cpm').onclick=()=>copy(msgText(),$('#ms'));$('#dlm').onclick=()=>save('CareBridge-reminders.txt',msgText(),$('#ms'));st.textContent=''}
+ catch(e){st.textContent=' Could not create reminders: '+(e.message||e.code)}}
+const HD=/^(Subject:.*|[^:\n\-\d][^:\n]{1,60}:)$/;
+const fmtMsg=t=>esc(t).split('\n').map(l=>HD.test(l)?'<strong>'+l+'</strong>':l.replace(/^(- [^:]{1,30}:)/,'<strong>$1</strong>')).join('\n');
+const waBold=t=>t.split('\n').map(l=>HD.test(l)?'*'+l+'*':l.replace(/^- ([^:]{1,30}):/,'- *$1:*')).join('\n');
+const clean=t=>String(t||'').replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B50}\u{2B55}\u{FE0F}\u{200D}]/gu,'').replace(/[ \t]{2,}/g,' ').replace(/ +\n/g,'\n').trim();
+function go(u){const a=document.createElement('a');a.href=u;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove()}
+function calOpen(i,t){const f=S.fu,en=encodeURIComponent;let s,len,title,det;
+ if(i<0){const [h,m]=f.time.split(':');s=new Date(f.date);s.setHours(+h,+m);len=60;title='Follow-up visit (as advised by your doctor)';det='Follow-up consultation as advised by your doctor. Please confirm details with your hospital. Created by CareBridge.'}
+ else{const m=S.msgs[i];s=new Date(m.date);s.setHours(9,0);len=30;title='CareBridge reminder: follow-up '+(m.label==='On the day'?'today':m.label.replace(' before',' away'));det=m.text}
+ const e=new Date(s.getTime()+len*60000);
+ go(t==='g'?'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+en(title)+'&details='+en(det)+'&dates='+ds(s)+'/'+ds(e):'https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&subject='+en(title)+'&body='+en(det)+'&startdt='+iso(s)+'&enddt='+iso(e))}
+function openVia(i){const st=$('#cs'),m=S.msgs[i].text;
+ let d=$('#ph').value.replace(/\D/g,'');if(d.length===10)d='91'+d;if(d.length<11||d.length>15){st.textContent=' Please enter a valid phone number with country code, e.g. +91 98765 43210.';return}go('https://wa.me/'+d+'?text='+encodeURIComponent(waBold(m)));
+ st.textContent=''}
+async function chat(){const q=$("#q").value.trim();if(!q)return;$("#q").value="";const c=$("#chat");
+ c.insertAdjacentHTML("beforeend",`<div class="u"><span>${esc(q)}</span></div>`);const a=document.createElement("div");a.className="a";a.innerHTML='<span><i class="sp"></i></span>';c.appendChild(a);c.scrollTop=1e9;
+ const prompt=`You are CareBridge, a warm, knowledgeable and friendly AI assistant. Answer ANY question the user asks, on any topic (health, general knowledge, writing, everyday help and more), in ${LN()}, clearly and in simple words. For health topics be empathetic and accurate and give general educational information; do not diagnose, prescribe, or change anyone's medicine doses, and for emergencies or serious symptoms advise urgent medical care. If discharge summary data is given below and the question relates to it, use it and never invent details that are missing from it. Reply as plain text.\nDISCHARGE SUMMARY DATA (may be none):${S.D?JSON.stringify(S.D):"none uploaded"}\nCONVERSATION:${S.hist.slice(-6).join("\n")}\nQuestion: ${q}`;
+ try{const r=await sample(prompt,{cache:false});a.firstChild.textContent=r.text;S.hist.push("Patient: "+q,"Assistant: "+r.text)}
+ catch(e){a.firstChild.textContent="Sorry, I could not answer just now. Please try again."}c.scrollTop=1e9}
+const L2=a=>(a||[]).map(x=>"• "+x).join("\n")||"Not mentioned";
+function sumText(){const D=S.D;return `CareBridge – Simplified Discharge Summary\n\n${L2(D.simpleSummary)}\n\nDIAGNOSIS\n${(D.diagnosis||[]).map(d=>d.term+": "+d.simple).join("\n")||"Not mentioned"}\n\nTREATMENT\n${L2(D.treatment)}\n\nMEDICINES\n${(D.medications||[]).map(m=>`• ${m.name} | Dose: ${m.dosage} | Timing: ${m.timing} | ${m.instructions}`).join("\n")||"Not mentioned"}\n\nFOOD & DRINK\n${L2(D.diet)}\n\nACTIVITY\n${L2(D.activity)}\n\nWARNING SIGNS\n${L2(D.warningSigns)}\n\nFOLLOW-UP\n${L2((D.followUp||[]).map(f=>f.when+" "+(f.details||"")))}\n\nCHECKLIST\n${(D.checklist||[]).map(c=>"☐ "+c).join("\n")}\n\nThis is not medical advice. Confirm unclear points with your doctor.`}
+const msgText=()=>S.msgs.map(m=>m.title+"\n"+m.text).join("\n\n---\n\n");
+async function copy(t,el){try{await navigator.clipboard.writeText(t)}catch(e){const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy")}catch(_){}a.remove()}el.textContent=" Copied ✓";setTimeout(()=>el.textContent="",2500)}
+async function save(n,t,el){if(!dl){el.textContent=" Download unavailable here – use Copy.";return}try{await dl.save({filename:n,data:t})}catch(e){if(e.code!=="declined")el.textContent=" Could not download – use Copy."}}
+</script>
+<script>
+/* Upload box helper: highlights the box while a file is dragged over it, and hands dropped files to the existing
+   #file input (same change event the app already listens to), so drag-and-drop works like tapping to choose. */
+(()=>{const d=document.getElementById("drop"),f=document.getElementById("file");if(!d)return;let n=0;const off=()=>{n=0;d.classList.remove("is-drag")};
+d.addEventListener("dragenter",e=>{e.preventDefault();n++;d.classList.add("is-drag")});
+d.addEventListener("dragover",e=>{e.preventDefault();if(e.dataTransfer)e.dataTransfer.dropEffect="copy"});
+d.addEventListener("dragleave",()=>{if(--n<=0)off()});
+d.addEventListener("drop",e=>{e.preventDefault();off();if(!f||!e.dataTransfer)return;
+ const ok=[...e.dataTransfer.files].filter(x=>x.type==="application/pdf"||x.type.startsWith("image/"));
+ if(!ok.length){const fl=document.getElementById("fl");if(fl)fl.textContent="Please drop a PDF or image file.";return}
+ try{const dt=new DataTransfer();ok.forEach(x=>dt.items.add(x));f.files=dt.files;f.dispatchEvent(new Event("change"))}catch(_){}});
+const fx=e=>{if(e.dataTransfer&&[...e.dataTransfer.types].includes("Files"))e.preventDefault()};window.addEventListener("dragover",fx);window.addEventListener("drop",fx);
+window.addEventListener("dragend",off)})();
+/* Visual-only: language pill buttons drive the existing #lang select (same value + change event the app already listens to). */
+(()=>{const s=document.getElementById("lang"),g=document.querySelector(".lp");if(!s||!g)return;document.documentElement.classList.add("has-lp");
+const sync=()=>g.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.v===s.value)));
+g.addEventListener("click",e=>{const b=e.target.closest("button");if(!b||b.dataset.v===s.value)return;s.value=b.dataset.v;s.dispatchEvent(new Event("change"));sync()});
+s.addEventListener("change",sync);sync()})();
+/* Visual-only: collapsible result cards. Wraps each result heading in a toggle; the Warning signs card (9th child) always stays open. */
+(()=>{const o=document.getElementById("out");if(!o)return;
+const prep=()=>[...o.children].forEach((c,i)=>{const h=c.classList.contains("card")&&c.querySelector(":scope>h2");if(!h||h.querySelector(".cx"))return;
+ const em=i===8,w=document.createElement(em?"span":"button");w.className="cx";if(!em){w.type="button";w.setAttribute("aria-expanded","true")}
+ while(h.firstChild)w.appendChild(h.firstChild);h.appendChild(w)});
+new MutationObserver(prep).observe(o,{childList:true});
+o.addEventListener("click",e=>{const b=e.target.closest("button.cx");if(!b)return;const shut=b.closest(".card").classList.toggle("is-shut");b.setAttribute("aria-expanded",String(!shut))})})();
+/* Visual-only: the header "Simplify a summary" link opens the upload step (same as Get started) and scrolls to it. */
+(()=>{const l=document.querySelector(".nl [data-open]"),s=document.getElementById("start"),i=document.getElementById("input");if(!l||!s||!i)return;
+l.addEventListener("click",e=>{e.preventDefault();if(i.classList.contains("hide"))s.click();i.scrollIntoView({behavior:"smooth",block:"start"})})})();
+</script></body></html>
